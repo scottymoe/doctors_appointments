@@ -8,7 +8,7 @@
 require "faker"
 
 10.times do |i|
-  p = Patient.create(first_name: Faker::Name.name,last_name: Faker::Name.last_name)
+  p = Patient.create(first_name: Faker::Name.name)
   d = Doctor.create(last_name: "Dr #{Faker::Name.last_name}")
 end
 
