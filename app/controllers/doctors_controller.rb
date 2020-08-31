@@ -10,6 +10,8 @@ class DoctorsController < ApplicationController
 
   def new
     @doctor = Doctor.new
+
+    render :_form
   end
 
   def create
@@ -23,11 +25,12 @@ class DoctorsController < ApplicationController
   end
 
   def edit
+    render :_form
   end
 
   def update
-    if @doctor.update(book_params)
-      redirect_to doctors_path
+    if @doctor.update(doctor_params)
+      redirect_to @doctor
     else
       render :edit
     end

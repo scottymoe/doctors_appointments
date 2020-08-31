@@ -9,7 +9,7 @@ require "faker"
 
 10.times do |i|
   p = Patient.create(first_name: Faker::Name.name)
-  d = Doctor.create(last_name: "Dr #{Faker::Name.last_name}")
+  d = Doctor.create(last_name: "Dr. #{Faker::Name.last_name}")
 end
 
 puts "seeded"

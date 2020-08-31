@@ -1,0 +1,9 @@
+<h1><%= @doctor.id ? "Edit #{@doctor.last_name}" : "Add new doctor" %></h1>
+<hr />
+<%= form_with(model: @doctor, local: true) do |f| %>
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true %>
+  </div>
+    <%= f.submit %>
+<% end %>
